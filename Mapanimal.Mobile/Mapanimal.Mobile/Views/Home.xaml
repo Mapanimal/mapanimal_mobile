@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:Mapanimal.Mobile.Controls" xmlns:mobile="clr-namespace:Mapanimal.Mobile"
+             x:Class="Mapanimal.Mobile.Views.Home">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="BlueColor">Blue</Color>
+            <Color x:Key="WhiteColor">White</Color>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="etiqueta" Text="{Static mobile:Literals.AppName}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <controls:TestControl Name="test2"></controls:TestControl>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Button Clicked="Button_Clicked" BackgroundColor="{StaticResource BlueColor}}" TextColor="{StaticResource WhiteColor}" Text="Test button"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
